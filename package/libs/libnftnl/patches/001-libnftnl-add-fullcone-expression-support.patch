@@ -17,7 +17,7 @@ Signed-off-by: Syrone Wong <wong.syrone@gmail.com>
 +++ b/include/libnftnl/expr.h
 @@ -245,6 +245,12 @@ enum {
  };
- 
+
  enum {
 +	NFTNL_EXPR_FULLCONE_FLAGS		= NFTNL_EXPR_BASE,
 +	NFTNL_EXPR_FULLCONE_REG_PROTO_MIN,
@@ -32,7 +32,7 @@ Signed-off-by: Syrone Wong <wong.syrone@gmail.com>
 +++ b/include/linux/netfilter/nf_tables.h
 @@ -1464,6 +1464,22 @@ enum nft_masq_attributes {
  #define NFTA_MASQ_MAX		(__NFTA_MASQ_MAX - 1)
- 
+
  /**
 + * enum nft_fullcone_attributes - nf_tables fullcone expression attributes
 + *

@@ -12,12 +12,28 @@ KERNEL_PATCHVER:=6.6
 
 include $(INCLUDE_DIR)/target.mk
 DEFAULT_PACKAGES += \
-	kmod-usb3 kmod-usb-dwc3 kmod-usb-dwc3-qcom \
-	kmod-leds-gpio kmod-gpio-button-hotplug \
-	kmod-qca-nss-dp kmod-ath11k-ahb \
-	wpad-openssl uboot-envtools \
-	e2fsprogs kmod-fs-ext4 losetup \
-	kmod-qca-nss-drv kmod-qca-nss-ecm \
-	kmod-qca-nss-drv-bridge-mgr
+	autocore cpufreq e2fsprogs losetup uboot-envtools wpad-openssl \
+	kmod-ath11k-ahb kmod-fs-ext4 kmod-gpio-button-hotplug kmod-leds-gpio kmod-usb3 kmod-usb-dwc3 kmod-usb-dwc3-qcom \
+	kmod-qca-nss-dp \
+	kmod-qca-nss-drv \
+	kmod-qca-nss-drv-bridge-mgr \
+	kmod-qca-nss-drv-eogremgr \
+	kmod-qca-nss-drv-gre \
+	kmod-qca-nss-drv-igs \
+	kmod-qca-nss-drv-l2tpv2 \
+	kmod-qca-nss-drv-lag-mgr \
+	kmod-qca-nss-drv-map-t \
+	kmod-qca-nss-drv-match \
+	kmod-qca-nss-drv-mirror \
+	kmod-qca-nss-drv-pppoe \
+	kmod-qca-nss-drv-pptp \
+	kmod-qca-nss-drv-qdisc \
+	kmod-qca-nss-drv-tun6rd \
+	kmod-qca-nss-drv-tunipip6 \
+	kmod-qca-nss-drv-vlan-mgr \
+	kmod-qca-nss-drv-vxlanmgr \
+	kmod-qca-nss-drv-wifi-meshmgr \
+	kmod-qca-nss-ecm \
+	kmod-qca-nss-macsec \
 
 $(eval $(call BuildTarget))
