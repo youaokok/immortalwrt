@@ -50,7 +50,7 @@ define Device/jdcloud_ax1800-pro
 	DEVICE_PACKAGES := ipq-wifi-jdcloud_ax1800-pro kmod-fs-ext4 mkf2fs f2fsck kmod-fs-f2fs
 	BLOCKSIZE := 64k
 	KERNEL_SIZE := 6144k
-	IMAGE/factory.bin := append-kernel | pad-to $${KERNEL_SIZE}  |  append-rootfs | append-metadata
+	IMAGE/factory.bin := append-kernel | pad-to $${KERNEL_SIZE} | append-rootfs | append-metadata
 endef
 TARGET_DEVICES += jdcloud_ax1800-pro
 
@@ -65,7 +65,7 @@ define Device/jdcloud_ax6600
 	DEVICE_PACKAGES := ipq-wifi-jdcloud_ax6600 kmod-ath11k-pci ath11k-firmware-qcn9074 kmod-fs-ext4 mkf2fs f2fsck kmod-fs-f2fs
 	BLOCKSIZE := 64k
 	KERNEL_SIZE := 6144k
-	IMAGE/factory.bin := append-kernel | pad-to $${KERNEL_SIZE}  |  append-rootfs | append-metadata
+	IMAGE/factory.bin := append-kernel | pad-to $${KERNEL_SIZE} | append-rootfs | append-metadata
 endef
 
 TARGET_DEVICES += jdcloud_ax6600
@@ -186,9 +186,7 @@ define Device/linksys_mr7350
 	PAGESIZE := 2048
 	UBINIZE_OPTS := -E 5
 	IMAGES += factory.bin
-	IMAGE/factory.bin := append-kernel | pad-to $$$$(KERNEL_SIZE) | \
-		append-ubi | linksys-image type=MR7350
-	DEVICE_PACKAGES := ipq-wifi-linksys_mr7350 \
-		kmod-leds-pca963x kmod-usb-ledtrig-usbport
+	IMAGE/factory.bin := append-kernel | pad-to $$$$(KERNEL_SIZE) | append-ubi | linksys-image type=MR7350
+	DEVICE_PACKAGES := ipq-wifi-linksys_mr7350 kmod-leds-pca963x kmod-usb-ledtrig-usbport
 endef
 TARGET_DEVICES += linksys_mr7350
