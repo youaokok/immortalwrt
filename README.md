@@ -1,4 +1,4 @@
-自用高通版immortalwrt。
+# 自用高通版immortalwrt。
 
 高通部分源码取自以下项目：
 
