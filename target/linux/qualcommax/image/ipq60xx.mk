@@ -52,7 +52,6 @@ define Device/yuncore_fap650
 endef
 TARGET_DEVICES += yuncore_fap650
 
-
 define Device/cmiot_ax18
 	$(call Device/FitImage)
 	$(call Device/UbiFit)
