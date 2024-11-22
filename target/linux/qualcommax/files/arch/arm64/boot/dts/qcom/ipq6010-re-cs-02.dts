@@ -297,9 +297,9 @@
 };
 
 &usb3 {
+	status = "okay";
 	pinctrl-0 = <&usb_pwr_pins>;
 	pinctrl-names = "default";
-	status = "okay";
 };
 
 &edma {
